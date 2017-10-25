@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div> Hello </div>
+    <div> World </div>
+    <input type="button" id = 'clickMe' value='Click Me' />
+  </body>
+  <script>
+  const forEach = fn => arr => { Array.prototype.forEach.call(arr, fn) }
+  const changeColor = forEach(elm => elm.style.color = 'blue')
+  document.getElementById('clickMe').addEventListener('click', () => changeColor(document.querySelectorAll('div')))
+
+  </script>
+</html>
